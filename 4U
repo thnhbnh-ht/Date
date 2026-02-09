@@ -79,15 +79,15 @@
 <body>
 
     <div class="container" id="mainCard">
-        <h1 id="question">Tối nay đi ăn với tớ nhé? 🍕</h1>
+        <h1 id="question">Chiều ni đi ăng với Bông nhaaa !!</h1>
         
         <div class="buttons" id="btnGroup">
-            <button id="yesBtn" onclick="celebrate()">Đồng ý</button>
-            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">Không</button>
+            <button id="yesBtn" onclick="celebrate()">Ó kìiiiii</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">Oh No!! Thế bận rôiiii</button>
         </div>
 
         <div class="success-msg" id="successMsg">
-            Hẹn gặp bạn lúc 7h tối nay nhé! 🥰
+            Hẹn Thế lúc 5h chiều nhaaa
         </div>
     </div>
 
