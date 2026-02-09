@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invite</title>
+    <style>
+        /* Màu chủ đạo: Xanh da trời */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e3f2fd; /* Xanh da trời nhạt */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #1976d2; /* Xanh da trời đậm */
+            margin-bottom: 2rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+            position: relative;
+            height: 60px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        #yesBtn {
+            background-color: #2196f3;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #bbdefb;
+            color: #1976d2;
+            position: absolute;
+            white-space: nowrap;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
+            background-color: #1e88e5;
+        }
+
+        /* Hiệu ứng khi thành công */
+        .success-msg {
+            display: none;
+            color: #0d47a1;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="mainCard">
+        <h1 id="question">Chiều ni đi ăng với Bông nhaaa !!</h1>
+        
+        <div class="buttons" id="btnGroup">
+            <button id="yesBtn" onclick="celebrate()">Ó kìiiiii</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">Oh No!! Thế bận rôiiii</button>
+        </div>
+
+        <div class="success-msg" id="successMsg">
+            Hẹn Thế lúc 5h chiều nhaaa
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            const noBtn = document.getElementById('noBtn');
+            const container = document.getElementById('btnGroup');
+            
+            // Tính toán giới hạn để nút không bay ra ngoài màn hình quá xa
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+            // Gán vị trí mới cho nút No
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        }
+
+        function celebrate() {
+            document.getElementById('question').style.display = 'none';
+            document.getElementById('btnGroup').style.display = 'none';
+            document.getElementById('successMsg').style.display = 'block';
+            document.getElementById('mainCard').style.backgroundColor = '#bbdefb';
+        }
+    </script>
+</body>
+</html>
