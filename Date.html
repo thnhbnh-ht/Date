@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bông cóa điều muốn núaaaa</title>
+<title>Chủ nhặttttt</title>
 
 <style>
 body {
@@ -15,8 +15,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-/* CARD */
 .container {
     background: white;
     padding: 2rem;
@@ -30,14 +28,11 @@ body {
     position: relative;
     animation: popIn 0.4s ease;
 }
-
-/* TITLE */
 h1 {
     color: #1976d2;
     margin-bottom: 2rem;
 }
 
-/* BUTTON ZONE */
 .buttons {
     position: relative;
     height: 80px;
@@ -66,7 +61,6 @@ button:hover {
     color: #1976d2;
 }
 
-/* SUCCESS */
 .success-msg {
     display: none;
     height: 100%;
@@ -78,7 +72,6 @@ button:hover {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* FORM */
 .form-wrapper {
     margin-top: 12px;
     height: 65vh;
@@ -91,8 +84,6 @@ button:hover {
     height: 100%;
     border: none;
 }
-
-/* SHAKE */
 .shake {
     animation: shake 0.3s;
 }
@@ -111,11 +102,11 @@ button:hover {
 
 <div class="container" id="mainCard">
 
-    <h1 id="question">Thế đi nhởi với b honggg!!</h1>
+    <h1 id="question">Question</h1>
 
     <div class="buttons" id="btnGroup">
-        <button id="yesBtn" onclick="celebrate()">Ó kìiiiii</button>
-        <button id="noBtn">Oh No!! Thế KHÔNG =))</button>
+        <button id="yesBtn" onclick="celebrate()">Yetttt</button>
+        <button id="noBtn">Nooooooooo</button>
     </div>
 
     <div class="success-msg" id="successMsg">
@@ -168,8 +159,6 @@ function moveSmart(mouseX, mouseY) {
 
 function celebrate() {
     const card = document.getElementById('mainCard');
-
-    /* TẮT HOÀN TOÀN NÉ */
     document.removeEventListener('mousemove', smartDodge);
     noBtn.style.display = 'none';
 
